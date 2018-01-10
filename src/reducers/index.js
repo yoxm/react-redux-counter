@@ -1,9 +1,9 @@
 
 import { combineReducers } from "redux"
-import CounterReducer from '../reducers/CounterReducer'
+import CounterReducer from './CounterReducer'
 
 const rootReducer = combineReducers({
-    CounterReducer: CounterReducer
+    CounterReducer
 })
 
 export default rootReducer
