@@ -1,4 +1,4 @@
-import {INCREMENT_COUNTER, DECREMENT_COUNTER} from '../contants/Counter';
+import {INCREMENT_COUNTER, DECREMENT_COUNTER} from '../contants/CounterContants';
 
 export default function counter(state = 0,action) {
     switch (action.type){

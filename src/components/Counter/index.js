@@ -4,10 +4,10 @@ import { createForm } from 'rc-form';
 
 export default class Counter extends Component{
     render(){
-        const {counter, increment, decrement, incrementIfOdd, incrementAsync} = this.props;
+        const {count, increment, decrement, incrementIfOdd, incrementAsync} = this.props;
         return(
             <p>
-                Clicked:{counter} times
+                Clicked:{count} times
                 {'  '}
                 <Button onClick={increment}>+</Button>
                 {'  '}

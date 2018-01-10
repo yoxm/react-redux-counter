@@ -4,7 +4,7 @@ import registerServiceWorker from './registerServiceWorker';
 import { Provider } from 'react-redux';
 import {createStore, applyMiddleware } from 'redux'
 import CounterContainer from './containers/CounterContainer'
-import rootReducer from '../src/reducers/CounterReducer'
+import rootReducer from '../src/reducers/index'
 import thunk from 'redux-thunk'
 
 const store = createStore(rootReducer,window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__(),applyMiddleware(thunk));

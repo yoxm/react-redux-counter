@@ -2,14 +2,14 @@ import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 import * as ActionCreators from '../actions/index'
 import { connect } from 'react-redux'
-import Counter from '../components/Counter/Counter'
+import Counter from '../components/Counter/index'
 
 class CounterContainer extends Component {
     render() {
-        const { counter, increment, decrement, incrementIfOdd, incrementAsync } = this.props;
+        const { count, increment, decrement, incrementIfOdd, incrementAsync } = this.props;
         return (
             <Counter
-                counter={counter}
+                count={count}
                 increment={increment}
                 decrement={decrement}
                 incrementIfOdd={incrementIfOdd}
@@ -19,7 +19,7 @@ class CounterContainer extends Component {
 }
 
 CounterContainer.propTypes = {
-    counter: PropTypes.number.isRequired,
+    count: PropTypes.number.isRequired,
     increment: PropTypes.func.isRequired,
     decrement: PropTypes.func.isRequired,
     incrementIfOdd: PropTypes.func.isRequired,
@@ -28,11 +28,11 @@ CounterContainer.propTypes = {
 
 function mapStateToProps(state) {
     return {
-        counter: state.counter
+        count: state.count
     };
 }
 
-
 export default connect(
-    mapStateToProps, ActionCreators
-)(CounterContainer)
+    mapStateToProps,
+    ActionCreators
+)(CounterContainer);

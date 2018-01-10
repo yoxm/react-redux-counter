@@ -1,4 +1,4 @@
-import {INCREMENT_COUNTER, DECREMENT_COUNTER} from '../contants/Counter'
+import {INCREMENT_COUNTER, DECREMENT_COUNTER} from '../contants/CounterContants'
 
 export function decrement() {
     return {
@@ -15,9 +15,9 @@ export function increment() {
 export function incrementIfOdd() {
     return (dispatch, getState) => {
         const {
-            counter
+            count
         } = getState();
-        if (counter % 2 == 0) {
+        if (count % 2 == 0) {
             return;
         }
         dispatch(increment());
